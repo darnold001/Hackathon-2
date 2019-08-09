@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import USAMap from "react-usa-map";
 import Card from './Card'
 import './App.css'
-import { FontAwesomeIcon } from '@fontawesome/react-fontawesome'
+import 'font-awesome/css/font-awesome.min.css';
 
 class App extends Component {
   constructor(){
@@ -38,11 +38,14 @@ class App extends Component {
   render() {
     const {state} = this.state
     return (
-      <div className="App">
-        <h1>Develop America</h1>
-        <i className="fas fa-flag-usa"></i>
+     <div>
+       <h1 id= 'title'>Develop America</h1>
+       <i className="fas fa-flag-usa"></i>
+        <div className="App">
+        
         <USAMap onClick={this.mapHandler} />
         <Card state={state}/>
+      </div>
       </div>
     );
   }
